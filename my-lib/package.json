@@ -1,0 +1,13 @@
+{
+  "name": "my-lib",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "./my-lib.cjs",
+  "module": "./my-lib.mjs.js",
+  "exports": {
+    ".": {
+      "import": "./my-lib.mjs.js",
+      "require": "./my-lib.cjs"
+    }
+  }
+}
