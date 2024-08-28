@@ -5,6 +5,117 @@ import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+import { MyResponsiveBar } from "./MyResponsiveBar";
+import { ResponsiveBar } from "@nivo/bar";
+
+const data = [
+  {
+    country: "AD",
+    "hot dog": 106,
+    "hot dogColor": "hsl(223, 70%, 50%)",
+    burger: 58,
+    burgerColor: "hsl(290, 70%, 50%)",
+    sandwich: 13,
+    sandwichColor: "hsl(298, 70%, 50%)",
+    kebab: 94,
+    kebabColor: "hsl(84, 70%, 50%)",
+    fries: 123,
+    friesColor: "hsl(94, 70%, 50%)",
+    donut: 39,
+    donutColor: "hsl(165, 70%, 50%)",
+  },
+  {
+    country: "AE",
+    "hot dog": 59,
+    "hot dogColor": "hsl(260, 70%, 50%)",
+    burger: 111,
+    burgerColor: "hsl(190, 70%, 50%)",
+    sandwich: 82,
+    sandwichColor: "hsl(319, 70%, 50%)",
+    kebab: 94,
+    kebabColor: "hsl(241, 70%, 50%)",
+    fries: 180,
+    friesColor: "hsl(352, 70%, 50%)",
+    donut: 95,
+    donutColor: "hsl(60, 70%, 50%)",
+  },
+  {
+    country: "AF",
+    "hot dog": 95,
+    "hot dogColor": "hsl(312, 70%, 50%)",
+    burger: 166,
+    burgerColor: "hsl(342, 70%, 50%)",
+    sandwich: 61,
+    sandwichColor: "hsl(297, 70%, 50%)",
+    kebab: 38,
+    kebabColor: "hsl(285, 70%, 50%)",
+    fries: 177,
+    friesColor: "hsl(217, 70%, 50%)",
+    donut: 48,
+    donutColor: "hsl(286, 70%, 50%)",
+  },
+  {
+    country: "AG",
+    "hot dog": 199,
+    "hot dogColor": "hsl(7, 70%, 50%)",
+    burger: 64,
+    burgerColor: "hsl(24, 70%, 50%)",
+    sandwich: 49,
+    sandwichColor: "hsl(232, 70%, 50%)",
+    kebab: 102,
+    kebabColor: "hsl(254, 70%, 50%)",
+    fries: 115,
+    friesColor: "hsl(66, 70%, 50%)",
+    donut: 180,
+    donutColor: "hsl(163, 70%, 50%)",
+  },
+  {
+    country: "AI",
+    "hot dog": 176,
+    "hot dogColor": "hsl(170, 70%, 50%)",
+    burger: 88,
+    burgerColor: "hsl(91, 70%, 50%)",
+    sandwich: 106,
+    sandwichColor: "hsl(339, 70%, 50%)",
+    kebab: 162,
+    kebabColor: "hsl(289, 70%, 50%)",
+    fries: 130,
+    friesColor: "hsl(49, 70%, 50%)",
+    donut: 143,
+    donutColor: "hsl(80, 70%, 50%)",
+  },
+  {
+    country: "AL",
+    "hot dog": 139,
+    "hot dogColor": "hsl(52, 70%, 50%)",
+    burger: 191,
+    burgerColor: "hsl(213, 70%, 50%)",
+    sandwich: 126,
+    sandwichColor: "hsl(208, 70%, 50%)",
+    kebab: 0,
+    kebabColor: "hsl(339, 70%, 50%)",
+    fries: 98,
+    friesColor: "hsl(339, 70%, 50%)",
+    donut: 178,
+    donutColor: "hsl(95, 70%, 50%)",
+  },
+  {
+    country: "AM",
+    "hot dog": 176,
+    "hot dogColor": "hsl(131, 70%, 50%)",
+    burger: 103,
+    burgerColor: "hsl(351, 70%, 50%)",
+    sandwich: 162,
+    sandwichColor: "hsl(337, 70%, 50%)",
+    kebab: 37,
+    kebabColor: "hsl(54, 70%, 50%)",
+    fries: 170,
+    friesColor: "hsl(178, 70%, 50%)",
+    donut: 46,
+    donutColor: "hsl(152, 70%, 50%)",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -14,7 +125,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* <Tooltip /> */}
       <main className={`${styles.main} ${inter.className}`}>
+        <div style={{ height: 600, width: 600 }}>
+          <MyResponsiveBar data={data} />
+        </div>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
